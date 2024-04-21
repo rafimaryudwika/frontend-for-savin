@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import leftPhone from "../../assets/img/left.png";
+import centerPhone from "../../assets/img/center.png";
+import rightPhone from "../../assets/img/right.png";
+import bg from "../../assets/img/bg.jpeg";
+---
+
+<div class="relative h-[32rem] bg-slate-200 overflow-hidden">
+  <div class="w-full">
+    <Image
+      src={bg}
+      alt="background"
+      width={bg.width / 2}
+      class="w-full h-full absolute object-cover grayscale brightness-[.3]"
+    />
+  </div>
+  <div class="flex flex-row z-0 h-full justify-around">
+    <div class="rounded-full absolute -right-14 -top-14 bg-yellow-500 size-80">
+    </div>
+    <div
+      class="rounded-full absolute -left-12 -bottom-12 bg-yellow-500 size-56"
+    >
+    </div>
+  </div>
+  <div class="absolute inset-0 flex flex-row h-full z-50">
+    <Image
+      class="object-cover basis-1/3 h-full aspect-[9/18]"
+      src={leftPhone}
+      width={leftPhone.width / 2}
+      alt="Input curhat"
+    />
+    <div class="flex flex-col justify-center basis-1/3">
+      <div class="text-center font-[800] text-4xl pt-4 -mt-80 text-stone-200">
+        <h1>
+          Merasa <span
+            class="before:block before:absolute before:inset-6 before:-inset-x-0 before:h-4 before:w-full before:bg-yellow-500/85 relative inline-block"
+            ><span class="relative">Kesepian?</span></span
+          >
+        </h1>
+        <h1>Curhat Penuh Privacy?</h1>
+        <h1>
+          <span
+            class="before:block before:absolute before:inset-6 before:-inset-x-0 before:h-4 before:w-full before:bg-yellow-500/85 relative inline-block"
+            ><span class="relative">Baca Alkitab</span></span
+          > Aja!
+        </h1>
+      </div>
+      <Image
+        class="absolute object-cover w-80 -bottom-28 aspect-[9/18] inset-y-28 left-0 right-0 mx-auto"
+        width={centerPhone.width / 2}
+        src={centerPhone}
+        alt="Aplikasi"
+      />
+    </div>
+    <Image
+      class="object-cover w-1/3 aspect-[9/18]"
+      src={rightPhone}
+      width={rightPhone.width / 2}
+      alt="Hasil curhat"
+    />
+  </div>
+</div>

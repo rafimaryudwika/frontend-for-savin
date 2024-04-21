@@ -1,16 +1,16 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import leftPhone from "../assets/img/left.png";
+import centerPhone from "../assets/img/center.png";
+import rightPhone from "../assets/img/right.png";
+import bg from "../assets/img/bg.jpeg";
+import Hero from "../components/portofolio/Hero.astro";
+import Description from "../components/portofolio/Description.astro";
+const currentPage = "portofolio";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout currentPage={currentPage}>
+  <Hero />
+  <Description />
+</Layout>
